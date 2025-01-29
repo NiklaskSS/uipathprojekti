@@ -27,6 +27,7 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -67,21 +68,24 @@
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="908.8000000000001,570.84" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1556,1087" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="433.6,104.8" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[1]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">1</InArgument>
-      </Assign.Value>
-    </Assign>
+    <Sequence sap2010:Annotation.AnnotationText="Read all PDF files from a specified folder.&#xD;&#xA;&#xD;&#xA;    The robot should process all PDF files in the folder, even if the number of files exceeds the initial amount.&#xD;&#xA;&#xD;&#xA;Process each invoice file one by one.&#xD;&#xA;&#xD;&#xA;    For each PDF file:&#xD;&#xA;        Extract the supplier (company code) from the invoice.&#xD;&#xA;        Extract and store key invoice details into variables, including:&#xD;&#xA;            Supplier (CompanyCode)&#xD;&#xA;            IBAN number&#xD;&#xA;            Reference number&#xD;&#xA;            Line item totals&#xD;&#xA;            Total amount (header total).&#xD;&#xA;&#xD;&#xA;Validate the extracted data:&#xD;&#xA;&#xD;&#xA;    Ensure the IBAN number is correctly formatted and valid.&#xD;&#xA;    Check that the reference number matches the required format.&#xD;&#xA;    Verify that the sum of the line items matches the total amount from the invoice header.&#xD;&#xA;&#xD;&#xA;Save the extracted and validated data to a temporary CSV file.&#xD;&#xA;&#xD;&#xA;    The CSV file should have a standardized format containing the following fields:&#xD;&#xA;        CompanyCode, IBAN, ReferenceNumber, TotalAmount, RowSum." sap:VirtualizedContainerService.HintSize="462,1064" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Sequence>
   </Sequence>
 </Activity>

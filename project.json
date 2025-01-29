@@ -4,6 +4,9 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.DocumentUnderstanding.Activities": "2.12.1",
+    "UiPath.Excel.Activities": "2.24.4",
+    "UiPath.MicrosoftOffice365.Activities": "2.8.22",
     "UiPath.System.Activities": "[24.10.7]"
   },
   "webServices": [],
@@ -40,7 +43,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "saveToCloud": false
+    "saveToCloud": false,
+    "cloudProjectUrl": "https://cloud.uipath.com:443/hamkidavovc/studio_/designer/e06d84aa-854b-4af4-8bb1-0b2fddc2affa"
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
