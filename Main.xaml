@@ -253,23 +253,42 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1556,1024" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="892.0000000000001,1036.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="umfm:O365DriveRemoteItem[]" Name="pdfFiles" />
       <Variable x:TypeArguments="uisad:IDocumentData(uisad:ExtendedExtractionResultsForDocumentData)" Name="extractionResults" />
+      <Variable x:TypeArguments="x:String" Name="variable1" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" DisplayName="Get list of PDF files from specified folder" sap:VirtualizedContainerService.HintSize="470,181" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="Browse" MaxResults="100" Result="[pdfFiles]" SearchMode="UseSimple" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="Files" WorkingWithDocumentLibrary="False">
+    <umaf:GetFileListConnections AllColumns="{x:Array Type=umsm:Office365SharepointListColumnSlim}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DynamicMetadataFilter="{x:Null}" Filter="{x:Null}" FreeTextFilter="{x:Null}" ItemIdBackup="{x:Reference __ReferenceID0}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" MetadataFilter="{x:Null}" SharepointLibraryItemFriendlyName="{x:Null}" SharepointListId="{x:Null}" SharepointSiteUrl="{x:Null}" SimpleSearch="{x:Null}" AuthScopesInvalid="False" DisplayName="Get list of PDF files from specified folder" sap:VirtualizedContainerService.HintSize="472.8,184.8" sap2010:WorkflowViewState.IdRef="GetFileListConnections_1" IncludeSubfolders="False" ItemSelectionMode="UseExisting" MaxResults="100" Result="[pdfFiles]" SearchMode="UseSimple" TrimDuplicates="False" UseConnectionService="True" WhatToReturn="[UiPath.MicrosoftOffice365.Enums.FindFilesAndFoldersResultType.Folders]" WorkingWithDocumentLibrary="False">
       <umaf:GetFileListConnections.DriveItemArgument>
-        <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" FullPathHint="" ItemSelectionMode="Browse" ParentFullPathHint="">
+        <umafm:DriveItemArgument BrowserDriveId="{x:Null}" BrowserDriveName="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemId="{x:Null}" BrowserParentDriveId="{x:Null}" BrowserParentDriveName="{x:Null}" BrowserParentItemFriendlyName="{x:Null}" BrowserParentItemId="{x:Null}" BrowserParentPath="{x:Null}" BrowserSiteUrl="{x:Null}" BrowserSpecificUrl="{x:Null}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Item="{x:Null}" ManualEntryDriveName="{x:Null}" ManualEntryItemFullPath="{x:Null}" ManualEntryItemId="{x:Null}" ManualEntryItemRelativePath="{x:Null}" ManualEntryItemUrl="{x:Null}" ManualEntrySiteUrl="{x:Null}" FullPathHint="" ItemSelectionMode="UseExisting" ParentFullPathHint="">
           <umafm:DriveItemArgument.ItemIdBackup>
-            <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+            <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="UseExisting">
               <usau:BackupSlot.BackupValues>
-                <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                <scg:List x:TypeArguments="x:Object" x:Key="Browse" Capacity="3">
+                  <x:Null />
+                  <x:Null />
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="UseExisting" Capacity="1">
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="RelativePath" Capacity="6">
+                  <x:Null />
+                  <x:Null />
+                  <x:Null />
+                  <x:Null />
+                  <x:Null />
+                  <x:Null />
+                </scg:List>
+                <scg:List x:TypeArguments="x:Object" x:Key="ItemUrl" Capacity="1">
+                  <x:Null />
+                </scg:List>
               </usau:BackupSlot.BackupValues>
             </usau:BackupSlot>
           </umafm:DriveItemArgument.ItemIdBackup>
@@ -283,22 +302,22 @@
         </usau:BackupSlot>
       </umaf:GetFileListConnections.FilterSelectionBackup>
     </umaf:GetFileListConnections>
-    <ui:ForEach x:TypeArguments="upr:ILocalResource" CurrentIndex="{x:Null}" DisplayName="For each PDF file in the list" sap:VirtualizedContainerService.HintSize="470,820" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[pdfFiles]">
+    <ui:ForEach x:TypeArguments="upr:ILocalResource" CurrentIndex="{x:Null}" DisplayName="For each PDF file in the list" sap:VirtualizedContainerService.HintSize="472.8,828.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[pdfFiles]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="upr:ILocalResource">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="upr:ILocalResource" Name="currentPdfFile" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,699" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="471.2,707.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CheckTrue Expression="{x:Null}" DisplayName="Validate IBAN number format" ErrorMessage="Invalid IBAN format." sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
-            <ui:CheckTrue Expression="{x:Null}" DisplayName="Validate reference number format" ErrorMessage="Invalid reference number format." sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
-            <ui:CheckTrue Expression="{x:Null}" DisplayName="Verify sum of line items matches total amount" ErrorMessage="Line item totals do not match the total amount." sap:VirtualizedContainerService.HintSize="434,161" sap2010:WorkflowViewState.IdRef="CheckTrue_3" />
-            <ui:AppendCsvFile DataTable="{x:Null}" Delimitator="Comma" DisplayName="Append extracted and validated data to temporary CSV file" FilePath="path/to/temp.csv" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
+            <ui:CheckTrue Expression="{x:Null}" DisplayName="Validate IBAN number format" ErrorMessage="Invalid IBAN format." sap:VirtualizedContainerService.HintSize="437.6,163.2" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+            <ui:CheckTrue Expression="{x:Null}" DisplayName="Validate reference number format" ErrorMessage="Invalid reference number format." sap:VirtualizedContainerService.HintSize="437.6,163.2" sap2010:WorkflowViewState.IdRef="CheckTrue_2" />
+            <ui:CheckTrue Expression="{x:Null}" DisplayName="Verify sum of line items matches total amount" ErrorMessage="Line item totals do not match the total amount." sap:VirtualizedContainerService.HintSize="437.6,163.2" sap2010:WorkflowViewState.IdRef="CheckTrue_3" />
+            <ui:AppendCsvFile DataTable="{x:Null}" Delimitator="Comma" DisplayName="Append extracted and validated data to temporary CSV file" FilePath="path/to/temp.csv" sap:VirtualizedContainerService.HintSize="437.6,157.6" sap2010:WorkflowViewState.IdRef="AppendCsvFile_1" />
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
